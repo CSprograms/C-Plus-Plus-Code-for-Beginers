@@ -16,9 +16,13 @@ int main()
 
     //Output.
     cout<<ip1<<" + "<<ip2<<" = "<<ip1+ip2<<endl;
+
     cout<<ip1<<" - "<<ip2<<" = "<<ip1-ip2<<endl;
+
     cout<<ip1<<" * "<<ip2<<" = "<<ip1*ip2<<endl;
+
     cout<<ip1<<" / "<<ip2<<" = "<<ip1/ip2<<endl;
+
     cout<<ip1<<" % "<<ip2<<" = "<<ip1%ip2<<endl;
 
 return 0;
