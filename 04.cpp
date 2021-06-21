@@ -4,23 +4,19 @@ using namespace std;
 
 int main()
 {
-    int ip1=10;     //Declaring and Initializing a variable.
+    //Statements to print "Hello World!" in single line.
+    cout<<"Hello ";
+    cout<<"World!";
 
-    int ip2{20};    //Value Initialization.
-    int ip3{};      //ip3 is initialized to default value, 0.
+    cout<<endl;
 
-    int ip4(40);    //Initializing a variable using parenthesis, Constructor type.
-    int ip5();      //ip5 is initialized to default value, 1.
+    //Statement to print "Hello World!" in two line, using escape sequence.
+    cout<<"Hello \nWorld!";
 
-    int ip6;        //Unknown initial value.
+    cout<<endl;
 
-    //Output.
-    cout<<"ip1 : "<<ip1<<endl;
-    cout<<"ip2 : "<<ip2<<endl;
-    cout<<"ip3 : "<<ip3<<endl;
-    cout<<"ip4 : "<<ip4<<endl;
-    cout<<"ip5 : "<<ip5<<endl;
-    cout<<"ip6 : "<<ip6<<endl;
+    //Statement to print "Hello World!" in two line, using manipulator.
+    cout<<"Hello "<<endl<<"World!";
 
-return 0;
+    return 0;
 }
