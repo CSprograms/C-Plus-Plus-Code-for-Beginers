@@ -1,18 +1,39 @@
-// Single Inheritance
+// Binary '=' Operator Overloading
 #include <iostream>
-#include "square.h"
-
 using namespace std;
+
+class io
+{
+    int data;
+public:
+    io(int arg = 0)
+    {
+        data = arg;
+    }
+    int getData()
+    {
+        return data;
+    }
+    io& operator= (const io &rhs)
+    {
+        if(this == &rhs)
+            return *this;
+
+        this->data = rhs.data;
+        return *this;
+    }
+};
 
 int main()
 {
-    square object1;
-    cout<<"Object1 Square : ";
-    cout<<object1.getSq()<<endl;
 
-    square object2(10);
-    cout<<"Object2 Square : ";
-    cout<<object2.getSq()<<endl;
+   io object1 = 24;
+   io object2;
 
-    return 0;
+   object2 = object1;
+
+   cout<<"The object 1 value : "<<object1.getData()<<endl;
+   cout<<"The object 2 value : "<<object2.getData()<<endl;
+
+return 0;
 }
