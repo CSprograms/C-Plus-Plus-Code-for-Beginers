@@ -3,16 +3,16 @@
 
 class operand
 {
-        int operand1;
+        int ip;
 
     public:
         operand(int val)
         {
-            operand1 = val;
+            ip = val;
         }
-        int getOperand1()
+        int getIp()
         {
-            return operand1;
+            return ip;
         }
 };
 
