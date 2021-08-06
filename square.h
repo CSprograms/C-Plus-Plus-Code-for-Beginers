@@ -2,21 +2,17 @@
 #define SQUARE_H_INCLUDED
 
 #include "operand.h"
-#include <cmath>
 
-class square : private operand
+class square : public operand
 {
-    int sq;
-    void calcSq()
-    {
-        sq = ceil(pow(getOperand1(),2));
-    }
+    int op;
 public:
-    square(int val1 = 0):operand(val1){    }
-    int getSq()
+    square(int val = 0):operand(val){    }
+    int getOp()
     {
-        calcSq();
-        return sq;
+        int temp = getIp();
+        op = temp * temp;
+        return op;
     }
 };
 
