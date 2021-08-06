@@ -1,19 +1,40 @@
-// Hierarchical Inheritance
+// Overloading the insertion "<<" and extraction ">>" Operator
 #include <iostream>
-#include "square.h"
-#include "cube.h"
-
 using namespace std;
+
+class io
+{
+    int ip;
+public:
+    io()
+    {
+        ip = 0;
+    }
+    friend istream& operator>>( istream  &, io & );
+    friend ostream& operator<<(ostream &, const io & );
+};
+
+istream& operator>>( istream  &input, io &obj )
+{
+         input >> obj.ip;
+         return input;
+}
+
+ostream& operator<<( ostream &output, const io &obj )
+{
+         output << "IP : " << obj.ip<<endl;
+         return output;
+}
 
 int main()
 {
-    square object1(10);
-    cout<<"Object1 Square : ";
-    cout<<object1.getSq()<<endl;
 
-    cube object2(10);
-    cout<<"Object2 Cube : ";
-    cout<<object2.getCu()<<endl;
+   io object1;
 
-    return 0;
+   cout<<"Enter the value for object 1 : ";
+   cin>>object1;
+
+   cout<<object1;
+
+return 0;
 }
