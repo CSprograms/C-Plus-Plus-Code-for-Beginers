@@ -1,14 +1,12 @@
-//32
+//32 extern keyword
 #include<iostream>
 using namespace std;
-
-extern char *date_time;
 
 int main()
 {
     extern char *date_time;
 
-    cout<<"System Time :  "<<date_time;
+    cout<<"System Time :  "<<date_time<<endl;
 
 	return 0;
 }
